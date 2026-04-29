@@ -262,6 +262,73 @@ ul.clean li {
   letter-spacing: 0.2px;
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 16px;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 22px;
+  width: min(440px, 100%);
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: 0;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.modal form {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal input,
+.modal select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.modal input:focus,
+.modal select:focus {
+  outline: 2px solid var(--yellow);
+  border-color: var(--yellow-dark);
+}
+
+.nav-links a.lang {
+  border: 1px solid #ddd;
+}
+
 @media (max-width: 920px) {
   .hero-grid,
   .grid.cols-2,
